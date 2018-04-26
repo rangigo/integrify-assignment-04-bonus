@@ -1,0 +1,265 @@
+body {
+  background-color: #161616;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+.main-header {
+  padding: 20px 0;
+}
+
+.main-header header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.main-header ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-header ul li {
+  margin: 0 4px;
+}
+
+.main-header ul img {
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+}
+
+.logo {
+  width: 256px;
+  height: 60px;
+}
+
+.search-bar {
+  position: relative;
+  letter-spacing: 2px;
+}
+
+.search-bar input {
+  border: none;
+  background-color: #161616;
+  margin-top: 2em;
+  z-index: 20;
+}
+
+.search-bar label {
+  position: absolute;
+  top: 1.5em;
+  left: 0;
+  color: #d6d6d6;
+  text-transform: uppercase;
+  z-index: 0;
+}
+
+.search-bar label::after {
+  content: "";
+  background: url("images/icons/icon-search.svg") no-repeat center right;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: -2em;
+  z-index: 0;
+}
+
+.main-header nav {
+  margin: 15px auto;
+  padding: 15px;
+  width: 100%;
+  border-top: 1px solid #6f6f6f;
+  color: #6f6f6f;
+  display: flex;
+  justify-content: center;
+}
+
+.main-header nav a {
+  margin: 10px 20px;
+  font-size: 1.2em;
+  position: relative;
+}
+
+.main-header nav a#cate::after,
+.main-header nav a#blog::after {
+  content: "";
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  height: 5px;
+  width: 5px;
+  margin-top: -4px;
+  pointer-events: none;
+  position: absolute;
+  right: -0.6em;
+  top: 0.6em;
+  transform: rotate(45deg);
+}
+
+.header-news {
+  margin-top: 20px;
+  display: grid;
+  grid-template-areas:
+    "a b"
+    "a c";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.main-news {
+  grid-area: a;
+  background: url("images/thumbs/masonry/guitarman-800.jpg") no-repeat center;
+  background-size: cover;
+  height: 560px;
+}
+
+.news {
+  position: relative;
+  color: white;
+}
+
+.news::before {
+  content: '';
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease-in-out;
+  opacity: .5;
+  background-color: #151515;
+}
+
+.news-content {
+  padding: 20px 40px;
+  left: 0;
+  bottom: 1.5em;
+  position: absolute;
+}
+
+.news-title {
+  text-align: center;
+  padding: 5px 25px;
+  background-color: #1dacd3;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.news-content h1 {
+  font-size: 3em;
+  margin: 0.5em 1.5em 0.5em 0;
+}
+
+.news-source {
+  color: rgb(189, 189, 189);
+}
+
+.news-source > * {
+  margin: 0 3px;
+}
+
+.news-source img {
+  border-radius: 50%;
+  width: 30px; height: 30px;
+  position: relative;
+  top: 0.5em;
+}
+
+.small-news-1 {
+  grid-area: b;
+  background: url('images/thumbs/masonry/lamp-400.jpg') no-repeat center;
+  background-size: cover;
+  height: 280px;
+}
+
+.small-news-2 {
+  grid-area: c;
+  background: url('images/thumbs/masonry/beetle-400.jpg') no-repeat center;
+  background-size: cover;
+  height: 280px;
+}
+
+.small-news h1 {
+  font-size: 1em;
+  margin-top: 12px;
+}
+
+.small-news .news-title {
+  background-color: rgb(62, 154, 62);
+}
+
+.small-news .news-content {
+  padding: 10px 20px;
+  bottom: 0.7em;
+}
+
+.main-content {
+  background-color: #f2f2f2;
+  padding: 6em;
+}
+
+.main-content > article {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.posts-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.post {
+  width: 30%;
+  background-color: white;
+  margin: 10px 0;
+}
+
+.post img {
+  width: 100%;
+}
+
+.post-content {
+  margin: 10px 5px;
+  padding: 20px;
+}
+
+.post-content > span {
+  font-size: 0.8em;
+  color: rgb(147, 147, 147);
+  font-weight: lighter; 
+}
+
+.post-content > h1 {
+  text-transform: capitalize;
+}
+
+.post-content > p {
+  font-size: 0.9em;
+  color: rgb(147, 147, 147);
+  font-weight: 300;
+}
+
+.post-tags {
+  margin: 5px 0; padding-top: 15px; 
+  color: rgb(34, 162, 226);
+}
